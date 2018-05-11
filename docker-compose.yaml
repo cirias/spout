@@ -1,0 +1,20 @@
+version: '2'
+services:
+  rabbitmq:
+    image: "rabbitmq:3.6-management-alpine"
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+
+#  seadragon:
+#    image: docker.2nd.io/seadragon:prod
+#    ports:
+#      - "10005:8000"
+#    environment:
+#      - AWS_ACCESS_KEY_ID
+#      - AWS_SECRET_ACCESS_KEY
+#    volumes:
+#      - ./devops/docker-configs/seadragon.toml:/opt/app/config/Settings.dev.toml
+#      - ./devops/docker-configs/seadragon.default.toml:/opt/app/config/Settings.default.toml
+#    entrypoint:
+#      - bin/local-run
